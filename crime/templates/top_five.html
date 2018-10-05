@@ -10,23 +10,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
     <title>The Wildebeests</title>
     <!-- Bootstrap Core CSS -->
-    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <!-- Menu CSS -->
-    <link href="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <link href="/static/css/sidebar-nav.min.css" rel="stylesheet">
     <!-- animation CSS -->
-    <link href="css/animate.css" rel="stylesheet">
+    <link href="/static/css/animate.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
     <!-- color CSS -->
-    <link href="css/colors/default.css" id="theme" rel="stylesheet">
-    <!--Leaflet CSS-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <link href="/static/css/default.css" id="theme" rel="stylesheet">
 </head>
 
 <body class="fix-header">
@@ -70,20 +62,20 @@
                 </div>
                 <ul class="nav" id="side-menu">
                         <li style="padding: 70px 0 0;">
-                                <a href="index.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                                <a href="/" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
                             </li>
                            
                             <li>
-                                <a href="top_five.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Top Crimes</a>
+                                <a href="/top_five" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Top Crimes</a>
                             </li>
                             <li>
-                                <a href="month_crimes.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Crimes by Month</a>
+                                <a href="/month_crimes" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Crimes by Month</a>
                             </li>
                             <li>
-                                <a href="frequent_crimes.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Crime by Hour</a>
+                                <a href="/frequent_crimes" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Crime by Hour</a>
                             </li>
                             <li>
-                                <a href="crimes_per_year.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Crimes Per Year</a>
+                                <a href="/crimes_per_year" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Crimes Per Year</a>
                             </li>
                    
                 </ul>
@@ -93,9 +85,8 @@
                         Chris Reid<br>
                         Miko Laforteza<br>
                         Crosby Burdon<br>
-                        <br>
-                        <br> 
-                        <img src="https://banner2.kisspng.com/20180306/qae/kisspng-police-officer-icon-cartoon-police-5a9f343692adf7.1308692415203830306008.jpg" height=150 width=150>
+                         
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUrXUOMy-xAVovJRO3zXboUa33wfd5HShT2x66z3GvtS3AydYJzQ" height=150 width=150>
                     </p>
                     </ul>
 
@@ -166,31 +157,18 @@
         </div>
         <!-- /#page-wrapper -->
     </div>
-    <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Menu Plugin JavaScript -->
-    <script src="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
-    <!--slimscroll JavaScript -->
-    <script src="js/jquery.slimscroll.js"></script>
-    <!--Wave Effects -->
-    <script src="js/waves.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="js/custom.min.js"></script>
-    <!-- google maps api -->
-    <!-- <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="../plugins/bower_components/gmaps/gmaps.min.js"></script>
-    <script src="../plugins/bower_components/gmaps/jquery.gmaps.js"></script> -->
-    <!--D3 JavaSCript-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
-    <!--Leaflet JavaScript-->
-    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
-    <script type="text/javascript" src="leaflet.js"></script>
-    <!--Heatmap JavaScript-->
-    <script type="text/javascript" src='heatmap.js'></script>
-    
+     <!-- jQuery -->
+     <script src="/static/js/jquery.min.js"></script>
+     <!-- Bootstrap Core JavaScript -->
+     <script src="/static/js/bootstrap.min.js"></script>
+     <!-- Menu Plugin JavaScript -->
+     <script src="/static/js/sidebar-nav.min.js"></script>
+     <!--slimscroll JavaScript -->
+     <script src="/static/js/jquery.slimscroll.js"></script>
+     <!--Wave Effects -->
+     <script src="/static/js/waves.js"></script>
+     <!-- Custom Theme JavaScript -->
+     <script src="/static/js/custom.min.js"></script>
 
 </body>
 
