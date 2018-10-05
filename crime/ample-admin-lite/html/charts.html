@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <title>Data Traffickers</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="css/colors/default.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header">
+    <!-- ============================================================== -->
+    <!-- Preloader -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Wrapper -->
+    <!-- ============================================================== -->
+    <div id="wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+                <h3><b>   Data Traffickers</b></h3> </div>
+            <div class="navbar-header">
+           
+                <!-- /Logo -->
+                <ul class="nav navbar-top-links navbar-right pull-right">
+                   
+
+                </ul>
+            </div>
+            <!-- /.navbar-header -->
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
+        </nav>
+        <!-- End Top Navigation -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav slimscrollsidebar">
+                <div class="sidebar-head">
+                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Navigation</span></h3>
+                </div>
+                <ul class="nav" id="side-menu">
+                    <li style="padding: 70px 0 0;">
+                        <a href="index.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                    </li>
+                   
+                    <li>
+                        <a href="map-google.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Google Map</a>
+                    </li>
+                    <li>
+                        <a href="charts.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Data Breakdown</a>
+                    </li>
+                   
+                </ul>
+
+                <ul style="padding: 70x 0 0;">
+                    <p> <br>Team Members: <br>
+                        Hannah Fan<br>
+                        Anthony Tang<br>
+                        Harvey Smith<br>
+                        Matt Murphey<br>
+                        <br>
+                        <br> 
+                        <img src="http://www.city.soka.saitama.jp/kohosoka/h29/17042099/01/170420_p01_02.jpg" height=150 width=150>
+                        </p>
+                    </ul>
+                <div class="center p-20">
+                     <a href="https://wrappixel.com/templates/ampleadmin/" ></a>
+                 </div>
+                 
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page Content -->
+        <!-- ============================================================== -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Data Breakdown</h4> </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <a href="https://wrappixel.com/templates/ampleadmin/" ></a>
+                        <ol class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li class="active">Data Breakdown</li>
+                        </ol>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="white-box">
+                            <h3 class="box-title">Data Breakdown</h3> 
+                        
+                            
+                        <form>
+                            <label>Date range: 11/23/2017-05/04/2018</label>
+                            <br>
+                            <label>Enter start date (mm/dd/yyyy): </label>
+                            <input id="start" placeholder="01/01/2018">
+                            <br>
+                            <label>Enter end date (mm/dd/yyyy): </label>
+                            <input id="end" placeholder="02/01/2018">
+                            <br>
+                            <button>Go</button>
+                        </form>
+
+                        <div id="plot1"></div>
+                        <P>Volume of vehicles directly correlates with number of incidents. <br>
+                            Each datapoint on the graph represents number of incidents per hour on a particular day.<br>
+                            The Y axis represents the number of incidents on any given hour.<br>
+                            The X axis the total volume of cars within a particular hour as measured by traffic sensors/detectors recorded by the city of Austin. </p>
+
+                        <div id="plot2"></div>
+                        <p>Average speed directly correlates with number of incidents. <br>
+                            The lower the speed the higher the amount of incidents. <br>
+                            The Y axis represents the number of incidents on any given hour. <br>
+                            The X axis represents the average speed of a vehicle.  
+                        </p>
+                        <div id="plot3"></div>
+                        <p>This pie chart shows the distribution for the type of reported issues in our dataset.<br>
+                        The top 3 issues are traffic hazards, urgent crashes, and crash services.<br>
+                        
+                        <a href="http://www.ci.austin.tx.us/qact/default.cfm">Here</a> is the link to the definitions of each issue.</p>
+                        <div id="plot4"></div>
+                        <p>Traffic incidents directly correlates with rush hour ranges.<br>
+                        The highest peaks tend to be between 4pm to 6pm.<br>
+                        The second highest peaks tend to be between 7am to 9am.<br></p>
+                        <p></p>
+                    </div>
+                    </div>
+                              
+                              
+                </div>
+            </div>
+        </div>
+            <!-- /.container-fluid -->
+            <footer class="footer text-center"> </footer>
+    </div>
+        <!-- ============================================================== -->
+        <!-- End Page Content -->
+        <!-- ============================================================== -->
+    
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <!--Plotly JavaScript-->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!--D3 JavaScript-->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!--Plot Logic-->
+    <script src="logic.js"></script>
+</body>
+
+</html>
