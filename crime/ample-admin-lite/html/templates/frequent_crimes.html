@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <title>The Wildebeests</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="css/colors/default.css" id="theme" rel="stylesheet">
+    <!--Leaflet CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header">
+    <!-- ============================================================== -->
+    <!-- Preloader -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Wrapper -->
+    <!-- ============================================================== -->
+    <div id="wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+                <h3><b>The Wildebeests</b></h3> </div>
+            <div class="navbar-header">
+        
+                <!-- /Logo -->
+                <ul class="nav navbar-top-links navbar-right pull-right">
+                
+                </ul>
+            </div>
+            <!-- /.navbar-header -->
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
+        </nav>
+        <!-- End Top Navigation -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <div class="navbar-default sidebar" role="navigation">
+            
+            <div class="sidebar-nav slimscrollsidebar">
+                <div class="sidebar-head">
+                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Navigation</span></h3>
+                </div>
+                <ul class="nav" id="side-menu">
+                    <li style="padding: 70px 0 0;">
+                        <a href="index.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                    </li>
+                   
+                    <li>
+                        <a href="top_five.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Top Crimes</a>
+                    </li>
+                    <li>
+                        <a href="month_crimes.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Crimes by Month</a>
+                    </li>
+                    <li>
+                        <a href="frequent_crimes.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Crime by Hour</a>
+                    </li>
+                    <li>
+                        <a href="crimes_per_year.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Crimes Per Year</a>
+                    </li>
+                   
+                </ul>
+                <ul style="padding: 70x 0 0;">
+                    <p>   <br>Team Members: <br>
+                        Hannah Fan<br>
+                        Chris Reid<br>
+                        Miko Laforteza<br>
+                        Crosby Burdon<br>
+                        
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUrXUOMy-xAVovJRO3zXboUa33wfd5HShT2x66z3GvtS3AydYJzQ" height=150 width=150>
+                    </p>
+                    </ul>
+
+                    
+                <div class="center p-20">
+                 </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page Content -->
+        <!-- ============================================================== -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Crime by Hour</h4> </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <a href="https://wrappixel.com/templates/ampleadmin/"></a>
+                        <ol class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li class="active">Crime by Hour</li>
+                        </ol>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="white-box">
+                                <!-- <iframe width="100%" height="520" frameborder="0" src="https://beemanjo.carto.com/builder/8f1d89bb-3923-44b7-abd1-d81923b00eb6/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe> -->
+                            <h3 class="box-title"></h3>
+                            <div class='tableauPlaceholder' id='viz1538704822064' style='position: relative'><noscript>
+                                <a href='#'><img alt='Most Dangerous Hour of the Day ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ch&#47;Chicago_Crime_4&#47;MostDangerousHouroftheDay&#47;1_rss.png' style='border: none' /></a>
+                            </noscript><object class='tableauViz'  style='display:none;'>
+                                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                                <param name='embed_code_version' value='3' /> 
+                                <param name='site_root' value='' />
+                                <param name='name' value='Chicago_Crime_4&#47;MostDangerousHouroftheDay' />
+                                <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ch&#47;Chicago_Crime_4&#47;MostDangerousHouroftheDay&#47;1.png' /> 
+                                <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+                                <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+                                <param name='display_count' value='yes' />
+                            </object>
+                            </div>                
+                            <script type='text/javascript'>                    
+                            var divElement = document.getElementById('viz1538704822064');                    
+                            var vizElement = divElement.getElementsByTagName('object')[0];                    
+                            vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+                            var scriptElement = document.createElement('script');                    
+                            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                            </script>
+
+                            <div id="map" class="gmaps"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+            <footer class="footer text-center"> </footer>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <!-- google maps api -->
+    <!-- <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="../plugins/bower_components/gmaps/gmaps.min.js"></script>
+    <script src="../plugins/bower_components/gmaps/jquery.gmaps.js"></script> -->
+    <!--D3 JavaSCript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <!--Leaflet JavaScript-->
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <script type="text/javascript" src="leaflet.js"></script>
+    <!--Heatmap JavaScript-->
+    <script type="text/javascript" src='heatmap.js'></script>
+    
+
+</body>
+
+</html>
