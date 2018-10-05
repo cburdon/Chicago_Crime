@@ -13,20 +13,12 @@
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Menu CSS -->
     <link href="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
-    <!-- toast CSS -->
-    <link href="../plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
-    <!-- morris CSS -->
-    <link href="../plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
-    <!-- chartist CSS -->
-    <link href="../plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
-    <link href="../plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
     <!-- animation CSS -->
     <link href="css/animate.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <!-- color CSS -->
     <link href="css/colors/default.css" id="theme" rel="stylesheet">
-    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -52,12 +44,14 @@
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <nav class="navbar navbar-default navbar-static-top m-b-0">
-                <h3><b>Week of Wildebeests</b></h3> </div>
+                <h3><b> Team Wildebeests</b></h3> </div>
             <div class="navbar-header">
-                    
+           
                 <!-- /Logo -->
-                <ul class="nav navbar-top-links navbar-right pull-right"></ul>
+                <ul class="nav navbar-top-links navbar-right pull-right">
                    
+
+                </ul>
             </div>
             <!-- /.navbar-header -->
             <!-- /.navbar-top-links -->
@@ -76,6 +70,7 @@
                         <li style="padding: 70px 0 0;">
                                 <a href="index.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
                             </li>
+                           
                             <li>
                                 <a href="top_five.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Top Crimes</a>
                             </li>
@@ -88,25 +83,24 @@
                             <li>
                                 <a href="crimes_per_year.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Crimes Per Year</a>
                             </li>
-
                 </ul>
 
                 <ul style="padding: 70x 0 0;">
-                <p>  <br>Team Members: <br>
-                    Hannah Fan<br>
-                    Chris Reid<br>
-                    Miko Laforteza<br>
-                    Crosby Burdon<br>
-                    <br>
-                    <br> 
-                    <img src="https://banner2.kisspng.com/20180306/qae/kisspng-police-officer-icon-cartoon-police-5a9f343692adf7.1308692415203830306008.jpg" height=150 width=150>
-                </p>
-                </ul>
+                    <p> <br>Team Members: <br>
+                        Hannah Fan<br>
+                        Chris Reid<br>
+                        Miko Laforteza<br>
+                        Crosby Burdon<br>
+                        <br>
+                        <br> 
+                        <img src="https://banner2.kisspng.com/20180306/qae/kisspng-police-officer-icon-cartoon-police-5a9f343692adf7.1308692415203830306008.jpg" height=150 width=150>
+                        </p>
+                    </ul>
                 <div class="center p-20">
-                     <a href="https://wrappixel.com/templates/ampleadmin/"></a>
+                     <a href="https://wrappixel.com/templates/ampleadmin/" ></a>
                  </div>
+                 
             </div>
-            
         </div>
         <!-- ============================================================== -->
         <!-- End Left Sidebar -->
@@ -118,63 +112,60 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Dashboard</h4> </div>
+                        <h4 class="page-title">Crimes by Month</h4> </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                        <a href="https://wrappixel.com/templates/ampleadmin/"></a>
+                        <a href="https://wrappixel.com/templates/ampleadmin/" ></a>
                         <ol class="breadcrumb">
                             <li><a href="#">Dashboard</a></li>
+                            <li class="active">Crimes by Month</li>
                         </ol>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
-                <!-- /.row -->
-                <!-- ============================================================== -->
-                <!-- Different data widgets -->
-                <!-- ============================================================== -->
-                <!-- .row -->
                 <div class="row">
-                    
-                    </div>
-                </div>
-                <!--/.row -->
-                <!--row -->
-                <!-- /.row -->
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="col-md-12">
                         <div class="white-box">
-                            <h3 class="box-title">Chicago Crime Data Summary</h3>
-                            <p>Team Week of the Wildebessts pulled multiple data sets from the City of Chicago to analyze the rate of criminal incidents that occur.
-                               <br>
-                               <br>
-                               From these datasets we analyzed a variety of factors such as: <br>
-                                Number of Incidents by Month <br>
-                                Number of Incidents by Hour <br>
-                                Number of Incidents by Category<br>
-                                Number of Incidents by Year <br>
-                                <br>
-                                <br>                           
-                            </p>
-                            <div id="plot"></div>
-                            <p></p>
-                        </div>
+                            <h3 class="box-title"></h3> 
+                            <div class='tableauPlaceholder' id='viz1538527707028' style='position: relative'><noscript>
+                                    <a href='#'><img alt='Crime by Month ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ch&#47;Chicago_Crime_Analysis_0&#47;MonthofMostFrequentCrimes&#47;1_rss.png' style='border: none' /></a>
+                                </noscript>
+                                <object class='tableauViz'  style='display:none;'>
+                                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                                    <param name='embed_code_version' value='3' /> 
+                                    <param name='site_root' value='' />
+                                    <param name='name' value='Chicago_Crime_Analysis_0&#47;MonthofMostFrequentCrimes' />
+                                    <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ch&#47;Chicago_Crime_Analysis_0&#47;MonthofMostFrequentCrimes&#47;1.png' /> 
+                                    <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+                                    <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+                                    <param name='display_count' value='yes' /></object>
+                                </div>                
+                                <script type='text/javascript'>                    
+                                var divElement = document.getElementById('viz1538527707028');                   
+                                var vizElement = divElement.getElementsByTagName('object')[0];                    
+                                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+                                var scriptElement = document.createElement('script');                    
+                                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                                vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                                </script>
+                      
+                        <p></p>
                     </div>
+                    </div>
+                              
+                              
                 </div>
-             
-              
             </div>
-            <!-- /.container-fluid -->
-            <footer class="footer text-center">  </footer>
         </div>
+            <!-- /.container-fluid -->
+            <footer class="footer text-center"> </footer>
+    </div>
         <!-- ============================================================== -->
         <!-- End Page Content -->
         <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
+    
+    <!-- /#wrapper -->
+    <!-- jQuery -->
     <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
@@ -184,28 +175,14 @@
     <script src="js/jquery.slimscroll.js"></script>
     <!--Wave Effects -->
     <script src="js/waves.js"></script>
-    <!--Counter js -->
-    <script src="../plugins/bower_components/waypoints/lib/jquery.waypoints.js"></script>
-    <script src="../plugins/bower_components/counterup/jquery.counterup.min.js"></script>
-    <!-- chartist chart -->
-    <script src="../plugins/bower_components/chartist-js/dist/chartist.min.js"></script>
-    <script src="../plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
-    <!-- Sparkline chart JavaScript -->
-    <script src="../plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
-    <script src="js/dashboard1.js"></script>
-    <script src="../plugins/bower_components/toast-master/js/jquery.toast.js"></script>
-    <!--Heatmap JavaScript-->
-    <script type="text/javascript" src='heatmap.js'></script>
     <!--Plotly JavaScript-->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!--D3 JavaScript-->
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <!--Line graph D3?-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
-    <!--line graph JavaScript-->
-    <script src="line_chart_logic.js"></script>
+    <!--Plot Logic-->
+    <script src="logic.js"></script>
 </body>
 
 </html>
