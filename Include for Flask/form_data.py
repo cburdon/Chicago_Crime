@@ -1,5 +1,3 @@
-from datetime import datetime as dt
-
 location_list = ['STREET', 'RESIDENCE', 'APARTMENT', 'SIDEWALK', 'OTHER',
        'PARKING LOT/GARAGE(NON.RESID.)', 'ALLEY', 'SCHOOL, PUBLIC, BUILDING',
        'SMALL RETAIL STORE', 'RESIDENCE-GARAGE', 'RESTAURANT',
