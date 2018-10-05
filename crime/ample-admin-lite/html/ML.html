@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <title>Data Traffickers</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="css/colors/default.css" id="theme" rel="stylesheet">
+    <!--Leaflet CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header">
+    <!-- ============================================================== -->
+    <!-- Preloader -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Wrapper -->
+    <!-- ============================================================== -->
+    <div id="wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+                <h3><b>   Data Traffickers</b></h3> </div>
+            <div class="navbar-header">
+        
+                <!-- /Logo -->
+                <ul class="nav navbar-top-links navbar-right pull-right">
+                
+                </ul>
+            </div>
+            <!-- /.navbar-header -->
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
+        </nav>
+        <!-- End Top Navigation -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <div class="navbar-default sidebar" role="navigation">
+            
+            <div class="sidebar-nav slimscrollsidebar">
+                <div class="sidebar-head">
+                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Navigation</span></h3>
+                </div>
+                <ul class="nav" id="side-menu">
+                    <li style="padding: 70px 0 0;">
+                        <a href="index.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                    </li>
+                   
+                    <li>
+                        <a href="map-google.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Google Map</a>
+                    </li>
+                    <li>
+                        <a href="charts.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Data Breakdown</a>
+                    </li>
+                   
+                </ul>
+                <ul style="padding: 70x 0 0;">
+                    <p>   <br>Team Members: <br>
+                        Hannah Fan<br>
+                        Chris Reid<br>
+                        Miko Laforteza<br>
+                        Crosby Burdon<br>
+                        <br>
+                        <br> 
+                        <img src="https://banner2.kisspng.com/20180306/qae/kisspng-police-officer-icon-cartoon-police-5a9f343692adf7.1308692415203830306008.jpg" height=150 width=150>
+                    </p>
+                    </ul>
+
+                    
+                <div class="center p-20">
+                 </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page Content -->
+        <!-- ============================================================== -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Will an arrest be made? Machine Learning</h4> </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <a href="https://wrappixel.com/templates/ampleadmin/"></a>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="white-box">
+                            <form action="{{url_for('route')}}" method="post">
+                            {% for type in location_list %}
+                            <select><option value={{type}}>{{type}}: </option></select>
+                            {% endfor %}
+                            {% for type in crime_type %}
+                            <select><option value={{type}}>{{type}}: </option></select>
+                            {% endfor %}
+                            {% for hour in hours %}
+                            <select><option value={{hour}}>{{hour}}: </option></select>
+                            {% endfor %}
+                            {% for place in beat %}
+                            <select><option value={{place}}>{{place}}: </option></select>
+                            {% endfor %}
+                                <label for="date">Calendar Date: </label>
+                                <input type="date" id="start"
+                                        value="2018-07-22"
+                                        min="2001-01-01" max="2099-12-31"/>
+                            <input type="submit" value="submit">
+                            </form>
+
+                <div class="row">
+                    {{function_return}}
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <!-- google maps api -->
+    <!-- <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="../plugins/bower_components/gmaps/gmaps.min.js"></script>
+    <script src="../plugins/bower_components/gmaps/jquery.gmaps.js"></script> -->
+    <!--D3 JavaSCript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <!--Leaflet JavaScript-->
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <script type="text/javascript" src="leaflet.js"></script>
+    <!--Heatmap JavaScript-->
+    <script type="text/javascript" src='heatmap.js'></script>
+    
+
+</body>
+
+</html>
