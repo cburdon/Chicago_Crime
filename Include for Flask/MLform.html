@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+<body>
+    
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row bg-title">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h4 class="page-title">Will an arrest be made? Machine Learning</h4> </div>
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                <a href="https://wrappixel.com/templates/ampleadmin/"></a>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- row -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="white-box">
+                    <form action="{{url_for('ML')}}" method="post" name="myform">
+                    
+                <p>Location: </p>
+                    <select name="location">
+                    {% for type in location_list %}
+                        <option value={{type}}>{{type}}</option>
+                    {% endfor %}</select>
+                    
+                    <p>Type of Crime: </p>
+                    <select name="crime_type">{% for type in crime_type %}<option value={{type}}>{{type}}</option>{% endfor %}</select>
+                    
+                    <p>Hour: </p>
+                    <select name="hour">{% for hour in hours %}<option value={{hour}}>{{hour}}</option>{% endfor %}</select>
+                    
+                    <p>Beat Number: </p>
+                    <select name="beat">{% for place in beat %}<option value={{place}}>{{place}}</option>{% endfor %}</select>
+                    
+                    <p>Date: </p>
+                        <label for="date">Calendar Date: </label>
+                        <input name="date" type="date" id="start"
+                                value="2018-07-22"
+                                min="2001-01-01" max="2099-12-31"/>
+                    <input type="submit">
+                    </form>
+
+        <div class="row">
+            <!-- {{function_return}} -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
+</div>
+
+</body>
+</html>
