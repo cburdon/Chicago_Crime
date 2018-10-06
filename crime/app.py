@@ -15,7 +15,7 @@ from keras.models import load_model
 
 # from form_data import *
 
-app = Flask(__name__, static_url_path='/static', static_folder='/crime/static')
+app = Flask(__name__, static_url_path='/static', static_folder='/static')
 
 
 # Form_data setup
