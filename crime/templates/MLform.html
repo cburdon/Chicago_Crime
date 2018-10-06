@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Machine Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Menu CSS -->
+    <link href="/static/css/sidebar-nav.min.css" rel="stylesheet">
+    <!-- toast CSS -->
+    <link href="/static/css/jquery.toast.css" rel="stylesheet">
+    <!-- morris CSS -->
+    <link href="/static/css/morris.css" rel="stylesheet">
+    <!-- chartist CSS -->
+    <link href="/static/css/chartist.min.css" rel="stylesheet">
+    <link href="/static/css/chartist-plugin-tooltip.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="/static/css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="/static/css/default.css" id="theme" rel="stylesheet">
+
+</head>
+
+
+<body class="fix-header">
+        <!-- ============================================================== -->
+        <!-- Preloader -->
+        <!-- ============================================================== -->
+        <div class="preloader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+            </svg>
+        </div>
+        <!-- ============================================================== -->
+        <!-- Wrapper -->
+        <!-- ============================================================== -->
+        <div id="wrapper">
+            <!-- ============================================================== -->
+            <!-- Topbar header - style you can find in pages.scss -->
+            <!-- ============================================================== -->
+            <nav class="navbar navbar-default navbar-static-top m-b-0">
+                    <h3><b> The Wildebeests</b></h3> </div>
+                <div class="navbar-header">
+               
+                    <!-- /Logo -->
+                    <ul class="nav navbar-top-links navbar-right pull-right">
+                       
+    
+                    </ul>
+                </div>
+                <!-- /.navbar-header -->
+                <!-- /.navbar-top-links -->
+                <!-- /.navbar-static-side -->
+            </nav>
+            <!-- End Top Navigation -->
+            <!-- ============================================================== -->
+            <!-- Left Sidebar - style you can find in sidebar.scss  -->
+            <!-- ============================================================== -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav slimscrollsidebar">
+                    <div class="sidebar-head">
+                        <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Navigation</span></h3>
+                    </div>
+                    <ul class="nav" id="side-menu">
+                            <li style="padding: 70px 0 0;">
+                                    <a href="/" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                                </li>
+                               
+                                <li>
+                                    <a href="/top_five" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Top Crimes</a>
+                                </li>
+                                <li>
+                                    <a href="/month_crimes" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Crimes by Month</a>
+                                </li>
+                                <li>
+                                    <a href="/frequent_crimes" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Crime by Hour</a>
+                                </li>
+                                <li>
+                                    <a href="/crimes_per_year" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Crimes Per Year</a>
+                                </li>
+                                <li>
+                                    <a href="/MLform" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Machine Learning</a>
+                                </li>
+                    </ul>
+    
+                    <ul style="padding: 70x 0 0;">
+                        <p> <br>Team Members: <br>
+                            Hannah Fan<br>
+                            Chris Reid<br>
+                            Miko Laforteza<br>
+                            Crosby Burdon<br>
+                            
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUrXUOMy-xAVovJRO3zXboUa33wfd5HShT2x66z3GvtS3AydYJzQ" height=150 width=150>
+                            </p>
+                        </ul>
+                    <div class="center p-20">
+                         <a href="https://wrappixel.com/templates/ampleadmin/" ></a>
+                     </div>
+                     
+                </div>
+            </div>
+
+    
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row bg-title">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h4 class="page-title">Will an arrest be made? Machine Learning</h4> </div>
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                <a href="https://wrappixel.com/templates/ampleadmin/"></a>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- row -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="white-box">
+                    <form action="{{url_for('ML')}}" method="post" name="myform">
+                    
+                <p>Location: </p>
+                    <select name="location">
+                    {% for type in location_list %}
+                        <option value={{type}}>{{type}}</option>
+                    {% endfor %}</select>
+                    
+                    <p>Type of Crime: </p>
+                    <select name="crime_type">{% for type in crime_type %}<option value={{type}}>{{type}}</option>{% endfor %}</select>
+                    
+                    <p>Hour: </p>
+                    <select name="hour">{% for hour in hours %}<option value={{hour}}>{{hour}}</option>{% endfor %}</select>
+                    
+                    <p>Beat Number: </p>
+                    <select name="beat">{% for place in beat %}<option value={{place}}>{{place}}</option>{% endfor %}</select>
+                    
+                    <p>Date: </p>
+                        <label for="date">Calendar Date: </label>
+                        <input name="date" type="date" id="start"
+                                value="2018-07-22"
+                                min="2001-01-01" max="2099-12-31"/>
+                    <input type="submit">
+                    </form>
+
+        <div class="row">
+            <!-- {{function_return}} -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
+</div>
+
+ <!-- jQuery -->
+ <script src="/static/js/jquery.min.js"></script>
+ <!-- Bootstrap Core JavaScript -->
+ <script src="/static/js/bootstrap.min.js"></script>
+ <!-- Menu Plugin JavaScript -->
+ <script src="/static/js/sidebar-nav.min.js"></script>
+ <!--slimscroll JavaScript -->
+ <script src="/static/js/jquery.slimscroll.js"></script>
+ <!--Wave Effects -->
+ <script src="/static/js/waves.js"></script>
+ <!-- Custom Theme JavaScript -->
+ <script src="/static/js/custom.min.js"></script>
+
+</body>
+</html>

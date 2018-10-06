@@ -8,8 +8,12 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
 
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 from flask_sqlalchemy import SQLAlchemy
+
+from keras.models import load_model
+
+from form_data import *
 
 app = Flask(__name__, static_url_path='/static', static_folder='C:/Users/cburd/Chicago_Crime/crime/static')
 
@@ -33,7 +37,7 @@ app = Flask(__name__, static_url_path='/static', static_folder='C:/Users/cburd/C
 
 
 @app.route("/")
-def index():
+def home():
     """Return the homepage."""
     return render_template("index.html")
 
@@ -56,6 +60,23 @@ def month_crimes():
 def top_crimes():
     """Return a list of sample names."""
     return render_template("top_five.html")
+
+try:
+    Crime_model = load_model("Cha_Crime_Onehot.h5")
+except:
+    function_return = "Error with loading the model into Flask."
+
+@app.route("/MLform")
+def index(location_list=location_list,hours=hours,crime_type=crime_type,beat=beat):
+    return render_template("MLform.html",location_list=location_list,hours=hours,crime_type=crime_type,beat=beat)
+
+@app.route("/ML",methods=['POST'])
+def ML():
+    form_data = request.form
+    ML_predict = np.random.choice(["True","False"], p=[0.3,0.7])
+    ML_results = np.random.random()
+    data = [form_data, {"Result": ML_predict, "Probability": ML_results}]
+    return jsonify(data)
     
 # @app.route("/data")
 # def names():

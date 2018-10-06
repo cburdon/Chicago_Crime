@@ -7,18 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
     <title>The Wildebeests</title>
-     <!-- Bootstrap Core CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Menu CSS -->
     <link href="/static/css/sidebar-nav.min.css" rel="stylesheet">
+    <!-- toast CSS -->
+    <link href="/static/css/jquery.toast.css" rel="stylesheet">
+    <!-- morris CSS -->
+    <link href="/static/css/morris.css" rel="stylesheet">
+    <!-- chartist CSS -->
+    <link href="/static/css/chartist.min.css" rel="stylesheet">
+    <link href="/static/css/chartist-plugin-tooltip.css" rel="stylesheet">
     <!-- animation CSS -->
     <link href="/static/css/animate.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="/static/css/style.css" rel="stylesheet">
     <!-- color CSS -->
     <link href="/static/css/default.css" id="theme" rel="stylesheet">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
 
 <body class="fix-header">
@@ -38,14 +51,12 @@
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <nav class="navbar navbar-default navbar-static-top m-b-0">
-                <h3><b> The Wildebeests</b></h3> </div>
+                <h3><b>The Wildebeests</b></h3> </div>
             <div class="navbar-header">
-           
+                    
                 <!-- /Logo -->
-                <ul class="nav navbar-top-links navbar-right pull-right">
+                <ul class="nav navbar-top-links navbar-right pull-right"></ul>
                    
-
-                </ul>
             </div>
             <!-- /.navbar-header -->
             <!-- /.navbar-top-links -->
@@ -64,7 +75,6 @@
                         <li style="padding: 70px 0 0;">
                                 <a href="/" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
                             </li>
-                           
                             <li>
                                 <a href="/top_five" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Top Crimes</a>
                             </li>
@@ -80,23 +90,25 @@
                             <li>
                                 <a href="/MLform" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Machine Learning</a>
                             </li>
+
                 </ul>
 
                 <ul style="padding: 70x 0 0;">
-                    <p> <br>Team Members: <br>
-                        Hannah Fan<br>
-                        Chris Reid<br>
-                        Miko Laforteza<br>
-                        Crosby Burdon<br>
-                        
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUrXUOMy-xAVovJRO3zXboUa33wfd5HShT2x66z3GvtS3AydYJzQ" height=150 width=150>
-                        </p>
-                    </ul>
+                <p>  <br>Team Members: <br>
+                    Hannah Fan<br>
+                    Chris Reid<br>
+                    Miko Laforteza<br>
+                    Crosby Burdon<br>
+                    <br>
+                    <br> 
+                    <img src="https://banner2.kisspng.com/20180306/qae/kisspng-police-officer-icon-cartoon-police-5a9f343692adf7.1308692415203830306008.jpg" height=150 width=150>
+                </p>
+                </ul>
                 <div class="center p-20">
-                     <a href="https://wrappixel.com/templates/ampleadmin/" ></a>
+                     <a href="https://wrappixel.com/templates/ampleadmin/"></a>
                  </div>
-                 
             </div>
+            
         </div>
         <!-- ============================================================== -->
         <!-- End Left Sidebar -->
@@ -108,73 +120,90 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Crimes by Month</h4> </div>
+                        <h4 class="page-title">Dashboard</h4> </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                        <a href="https://wrappixel.com/templates/ampleadmin/" ></a>
+                        <a href="https://wrappixel.com/templates/ampleadmin/"></a>
                         <ol class="breadcrumb">
                             <li><a href="#">Dashboard</a></li>
-                            <li class="active">Crimes by Month</li>
                         </ol>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
+                <!-- /.row -->
+                <!-- ============================================================== -->
+                <!-- Different data widgets -->
+                <!-- ============================================================== -->
+                <!-- .row -->
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="white-box">
-                            <h3 class="box-title"></h3> 
-                            <div class='tableauPlaceholder' id='viz1538706097316' style='position: relative'><noscript>
-                                <a href='#'><img alt='Most Dangerous Month of the Year ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ch&#47;Chicago_Crime_4&#47;MostDangerousMonthoftheYear&#47;1_rss.png' style='border: none' /></a>
-                            </noscript>
-                            <object class='tableauViz'  style='display:none;'>
-                                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                                <param name='embed_code_version' value='3' /> 
-                                <param name='site_root' value='' />
-                                <param name='name' value='Chicago_Crime_4&#47;MostDangerousMonthoftheYear' />
-                                <param name='tabs' value='no' />
-                                <param name='toolbar' value='yes' />
-                                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ch&#47;Chicago_Crime_4&#47;MostDangerousMonthoftheYear&#47;1.png' /> 
-                                <param name='animate_transition' value='yes' />
-                                <param name='display_static_image' value='yes' />
-                                <param name='display_spinner' value='yes' />
-                                <param name='display_overlay' value='yes' />
-                                <param name='display_count' value='yes' />
-                                <param name='filter' value='publish=yes' />
-                            </object>
-                        </div>                
-                        <script type='text/javascript'>                    
-                        var divElement = document.getElementById('viz1538706097316');                    
-                        var vizElement = divElement.getElementsByTagName('object')[0];                    
-                        vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                   
-                        var scriptElement = document.createElement('script');                    
-                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-                        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-                        </script>
-                        <p></p>
+                    
                     </div>
-                    </div>
-                              
-                              
                 </div>
+                <!--/.row -->
+                <!--row -->
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <div class="white-box">
+                            <h3 class="box-title">Chicago Crime Data Summary</h3>
+                            <p>Team Week of the Wildebeests pulled multiple data sets from the City of Chicago to analyze the rate of criminal incidents that occur.
+                               <br>
+                               <br>
+                               The initial database for Chicago Crime included 6.5 million rows of the span of 10 years, 2008 to 2018.
+                               <br>
+                               <br>
+                               From these datasets we analyzed a variety of factors such as: <br>
+                                Number of Incidents by Month <br>
+                                Number of Incidents by Hour <br>
+                                Number of Incidents by Category<br>
+                                Number of Incidents by Year <br>
+                                <br>
+                                <br>    
+                                *The uploaded database only has 853,414 rows due to limitation and time issues.                        
+                            </p>
+                            <div id="plot"></div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+             
+              
             </div>
-        </div>
             <!-- /.container-fluid -->
-            <footer class="footer text-center"> </footer>
-    </div>
+            <footer class="footer text-center">  </footer>
+        </div>
         <!-- ============================================================== -->
         <!-- End Page Content -->
         <!-- ============================================================== -->
-   <!-- jQuery -->
-   <script src="/static/js/jquery.min.js"></script>
-   <!-- Bootstrap Core JavaScript -->
-   <script src="/static/js/bootstrap.min.js"></script>
-   <!-- Menu Plugin JavaScript -->
-   <script src="/static/js/sidebar-nav.min.js"></script>
-   <!--slimscroll JavaScript -->
-   <script src="/static/js/jquery.slimscroll.js"></script>
-   <!--Wave Effects -->
-   <script src="/static/js/waves.js"></script>
-   <!-- Custom Theme JavaScript -->
-   <script src="/static/js/custom.min.js"></script>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="/static/js/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="/static/js/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="/static/js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="/static/js/waves.js"></script>
+    <!--Counter js -->
+    <script src="/static/js/jquery.waypoints.js"></script>
+    <script src="/static/js/jquery.counterup.min.js"></script>
+    <!-- chartist chart -->
+    <script src="/static/js/chartist.min.js"></script>
+    <script src="/static/js/chartist-plugin-tooltip.min.js"></script>
+    <!-- Sparkline chart JavaScript -->
+    <script src="/static/js/jquery.sparkline.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="/static/js/custom.min.js"></script>
+    <script src="/static/js/dashboard1.js"></script>
+    <script src="/static/js/jquery.toast.js"></script>
+
 </body>
 
 </html>
+
