@@ -13,7 +13,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 from keras.models import load_model
 
-from form_data import *
+from form_data.py import *
 
 app = Flask(__name__, static_url_path='/static', static_folder='C:/Users/cburd/Chicago_Crime/crime/static')
 
