@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath crime app.py
+web: gunicorn --pythonpath crime/app.py
