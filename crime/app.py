@@ -68,7 +68,7 @@ except:
 
 @app.route("/MLform")
 def index(location_list=location_list,hours=hours,crime_type=crime_type,beat=beat):
-    return render_template("MLform.html",location_list=location_list,hours=hours,crime_type=crime_type,beat=beat)
+    return render_template("crime/templates/MLform.html",location_list=location_list,hours=hours,crime_type=crime_type,beat=beat)
 
 @app.route("/ML",methods=['POST'])
 def ML():
