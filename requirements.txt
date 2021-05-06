@@ -3,7 +3,7 @@ et-xmlfile==1.0.1
 fastcache==1.0.2
 filelock==2.0.13
 Flask==0.12.2
-Flask-Cors==3.0.3
+Flask-Cors==3.0.9
 Flask-PyMongo==2.0.1
 Flask-SQLAlchemy==2.3.2
 gunicorn==19.9.0
